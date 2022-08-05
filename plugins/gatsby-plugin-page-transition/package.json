@@ -1,0 +1,6 @@
+{
+  "name": "gatsby-plugin-page-transition",
+  "dependencies": {
+    "framer-motion": "6.5.1"
+  }
+}

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Encode Sans Condensed';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/EncodeSansCondensed-Regular.woff');
+}
+
+@font-face {
+  font-family: 'Titillium Web Regular';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/TitilliumWeb-Regular.woff');
+}
+@font-face {
+  font-family: 'Titillium Web Bold';
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/TitilliumWeb-Bold.ttf');
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
