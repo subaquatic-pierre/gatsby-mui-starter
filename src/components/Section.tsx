@@ -25,7 +25,7 @@ const Section: React.FC<Props> = ({
       sx={{
         minHeight: height ? `${height}vh` : ``,
         paddingTop:
-          topSection && `${Number(theme.mixins.toolbar.minHeight) + 8}px`,
+          topSection && `${Number(theme.mixins.toolbar.minHeight) + 10}px`,
         ...extraStyles
       }}
     >

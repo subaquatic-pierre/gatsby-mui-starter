@@ -11,7 +11,7 @@ const Logo: React.FC<Props> = ({ light = false }: Props) => {
   return (
     <Box href="/" component="a">
       <StaticImage
-        color={light && 'white'}
+        style={{ filter: light && 'invert(100%)' }}
         src="../static/images/brand/logo.svg"
         alt="Logo"
         layout="constrained"

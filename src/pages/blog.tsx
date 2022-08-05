@@ -27,18 +27,7 @@ const IndexPage: React.FC<Props> = ({ data }: Props) => {
             alignItems: 'center'
           }}
         >
-          <Typography variant="h1">Material UI Starter</Typography>
-        </div>
-      </Section>
-      <Section topSection fluid height={60}>
-        <div
-          style={{
-            display: ' flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          <Typography variant="h1">Section</Typography>
+          <Typography variant="h1">Cool Blog</Typography>
         </div>
       </Section>
     </Layout>
@@ -48,7 +37,7 @@ const IndexPage: React.FC<Props> = ({ data }: Props) => {
 export default IndexPage;
 
 export const query = graphql`
-  query IndexPageQuery {
+  query BlogPageQuery {
     site {
       meta: siteMetadata {
         title

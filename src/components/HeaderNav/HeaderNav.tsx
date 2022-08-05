@@ -50,11 +50,10 @@ const Header: React.FC<Props> = ({ navItems }: Props) => {
       }}
     >
       <AppBar
-        color={stickyHeader ? 'default' : 'transparent'}
+        color={stickyHeader ? 'default' : 'secondary'}
         component="nav"
         sx={{
           boxShadow: stickyHeader ? theme.shadows[1] : 'none',
-          backgroundColor: stickyHeader && theme.palette.background.default,
           transition: '0.5s ease',
           paddingTop: '0.2rem',
           paddingBottom: '0.2rem',
