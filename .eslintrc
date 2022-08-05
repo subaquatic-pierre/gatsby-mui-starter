@@ -24,9 +24,11 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "react"],
-  "ignorePatterns": ["**/*.test.*", "**/__test__/*"],
   "rules": {
-    "@typescript-eslint/no-unused-vars": { "varsIgnorePattern": "React" },
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "varsIgnorePattern": "React" }
+    ],
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -40,3 +42,4 @@
     "no-undef": "off"
   }
 }
+
