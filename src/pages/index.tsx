@@ -7,7 +7,7 @@ import { PageProps } from 'gatsby';
 import { SiteMeta } from 'types/Site';
 
 import Typography from '@mui/material/Typography';
-import FullSlider from 'components/FullSlider';
+import IndexHero from 'components/IndexHero';
 
 interface Props extends PageProps<Props> {
   site: {
@@ -20,6 +20,7 @@ const IndexPage: React.FC<Props> = ({ data }: Props) => {
 
   return (
     <Layout meta={site.meta}>
+      <IndexHero />
       <Section topSection fluid height={60}>
         <div
           style={{
@@ -27,9 +28,7 @@ const IndexPage: React.FC<Props> = ({ data }: Props) => {
             justifyContent: 'center',
             alignItems: 'center'
           }}
-        >
-          <FullSlider />
-        </div>
+        ></div>
       </Section>
       <Section topSection fluid height={60}>
         <div
