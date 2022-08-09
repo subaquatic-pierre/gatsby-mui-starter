@@ -2,12 +2,14 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from 'layout';
 import Section from 'components/Section';
-import { PageProps } from 'gatsby';
-
-import { SiteMeta } from 'types/Site';
 
 import Typography from '@mui/material/Typography';
-import FullSlider from 'components/FullSlider';
+import Button from '@mui/material/Button';
+
+import Modal from 'components/Modal';
+import { useModal } from 'hooks';
+import { SiteMeta } from 'types/Site';
+import { PageProps } from 'gatsby';
 
 interface Props extends PageProps<Props> {
   site: {
@@ -15,8 +17,14 @@ interface Props extends PageProps<Props> {
   };
 }
 
-const IndexPage: React.FC<Props> = ({ data }: Props) => {
+const SomePage: React.FC<Props> = ({ data }: Props) => {
   const { site } = data;
+  const [setComponent, setModalOpen] = useModal();
+
+  const handleOpenModal = () => {
+    setComponent(<Modal handleClose={() => setModalOpen(false)} />);
+    setModalOpen(true);
+  };
 
   return (
     <Layout meta={site.meta}>
@@ -28,28 +36,18 @@ const IndexPage: React.FC<Props> = ({ data }: Props) => {
             alignItems: 'center'
           }}
         >
-          <FullSlider />
-        </div>
-      </Section>
-      <Section topSection fluid height={60}>
-        <div
-          style={{
-            display: ' flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          <Typography variant="h1">Section</Typography>
+          <Button onClick={handleOpenModal}>Open Modal</Button>
+          <Typography variant="h1">Cool Blog</Typography>
         </div>
       </Section>
     </Layout>
   );
 };
 
-export default IndexPage;
+export default SomePage;
 
 export const query = graphql`
-  query IndexPageQuery {
+  query SomeQuery {
     site {
       meta: siteMetadata {
         title

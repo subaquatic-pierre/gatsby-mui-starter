@@ -9,21 +9,17 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 
-import { NavItem } from 'types/Nav';
-
 import NavDrawer from './NavDrawer';
 import NavButton from './NavButton';
 import Logo from 'components/Logo';
 
-import useScrollPosition from 'hooks/useScrollPosition';
+import { useScrollPosition } from 'hooks';
+
+import { headerNavItems } from './data';
 
 const drawerWidth = 300;
 
-interface Props {
-  navItems: NavItem[];
-}
-
-const Header: React.FC<Props> = ({ navItems }: Props) => {
+const Header = () => {
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
   const scrollPosition = useScrollPosition();
@@ -103,7 +99,7 @@ const Header: React.FC<Props> = ({ navItems }: Props) => {
             <Box
               sx={{ marginLeft: 'auto', display: { xs: 'none', sm: 'block' } }}
             >
-              {navItems.map((item, index) => (
+              {headerNavItems.map((item, index) => (
                 <NavButton key={index} item={item} invertColor={stickyHeader} />
               ))}
             </Box>
@@ -129,7 +125,7 @@ const Header: React.FC<Props> = ({ navItems }: Props) => {
         >
           <NavDrawer
             handleToggleDrawer={handleToggleDrawer}
-            navItems={navItems}
+            navItems={headerNavItems}
           />
         </Drawer>
       </Box>

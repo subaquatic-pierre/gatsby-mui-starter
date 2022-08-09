@@ -1,8 +1,7 @@
 export interface SiteMeta {
   title: string;
   baseTitle: string;
-  siteUrl: string;
+  url: string;
   description: string;
-  domain: string;
   image: string;
 }

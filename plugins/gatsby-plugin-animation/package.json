@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-plugin-page-transition",
+  "name": "gatsby-plugin-animation",
   "dependencies": {
     "framer-motion": "6.5.1"
   }

@@ -2,11 +2,11 @@ import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: 'Mui Starter',
-    baseTitle: 'Mui Starter',
-    siteUrl: 'https://www.mui-starter.com',
-    description: 'Material UI Starter',
-    domain: 'muo-starter.com'
+    title: 'Online Travel Agency | Book Your Best Holiday Homes',
+    baseTitle: 'Luke Stays',
+    url: 'https://lukestays.com',
+    description:
+      'Luke Stays is one the best booking platforms, book your stay worldwide. An online travel agency that ensures the best guest experience.'
   },
   graphqlTypegen: true,
   plugins: [
@@ -46,6 +46,22 @@ const config: GatsbyConfig = {
       },
       __key: 'content'
     },
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaults: {
+          placeholder: `none`,
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {}
+        }
+      }
+    },
+
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
@@ -55,8 +71,8 @@ const config: GatsbyConfig = {
     'gatsby-plugin-resolve-src',
 
     // Local plugins
-    'gatsby-plugin-top-layout',
-    'gatsby-plugin-page-transition'
+    'gatsby-plugin-animation',
+    'gatsby-plugin-top-layout'
   ]
 };
 

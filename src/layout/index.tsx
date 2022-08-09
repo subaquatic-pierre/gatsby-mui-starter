@@ -9,9 +9,11 @@ import { initSmoothScroll } from 'utils/smoothScroll';
 
 import 'static/css/main.css';
 import 'static/js/main.js';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 import { SiteMeta } from 'types/Site';
-import { headerNavItems } from './navData';
 
 interface Props extends React.PropsWithChildren {
   meta: SiteMeta;
@@ -31,7 +33,7 @@ const Layout: React.FC<Props> = ({ meta, children }) => {
     <>
       <CssBaseline />
       <SEO meta={meta} />
-      <Header navItems={headerNavItems} />
+      <Header />
       <main>{children}</main>
       <Footer />
     </>

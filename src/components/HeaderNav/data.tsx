@@ -8,7 +8,10 @@ export const headerNavItems: NavItem[] = [
     title: 'Blog',
     link: '/blog',
     icon: <FeedIcon />
+  },
+  {
+    title: 'Some',
+    link: '/some',
+    icon: <FeedIcon />
   }
 ];
-
-export const footerav: NavItem[] = [];
