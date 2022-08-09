@@ -32,9 +32,8 @@ const FullSlider: React.FC = () => {
       }}
     >
       <Swiper
-        style={{ height: '100%', width: '100%' }}
-        modules={[Navigation]}
         navigation={true}
+        modules={[Navigation]}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
       >
